@@ -1,13 +1,15 @@
 'use client'
 
 import { useEffect, useRef, useState } from "react"
+import io from "socket.io-client"
+
+
 import { Send, User } from 'lucide-react'
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import io from "socket.io-client"
 
 export default function Component() {
   const [socket, setSocket] = useState<any>(null)
